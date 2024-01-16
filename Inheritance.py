@@ -4,7 +4,8 @@
 # when a class is derived from another derived class - Multiple inheritance
 # when a parent is derived in more than one child - Hierarchical inheritance
 # Using morethan one inheritance - Hybrid inheritance
-# mro(method resolution order is used findout which method has to be executed when morre than class have same methods.
+# The method resolution order (MRO) is a mechanism employed in oop to determine the sequence in which methods should be executed -
+# when multiple classes share the same method names, ensuring a systematic resolution of method conflicts.
 class Member:
     def __init__(self, fname, lname, email, memberId, address, mobileNumber, dateJoined):
         self.fname = fname
