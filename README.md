@@ -1,10 +1,16 @@
 # OOPS
 
 ## Class: 
+A class is blue print. It have methods, attributes, constructor function, etc.,
 ## Object:
-## Instance:
+Object: An object is an instance of a class. It is a concrete realization of the class, with its own unique data attributes and, potentially, modified behavior through its methods.
+
 ## Attributes: 
-## Behaviours:
+Also known as properties or fields, attributes are the data members of a class that define the characteristics of an object.
+
+## Methods: 
+Methods are functions associated with a class. They define the behavior of the class and can operate on the data attributes of the object.
+## Instance:
 ## Self: 
 ## Inheritance:
 ## Method Overloading: 
