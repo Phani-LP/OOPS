@@ -1,7 +1,7 @@
 #Multi level inheritance
 class GrandParent:
   def method1(self):
-    prinit("I am Grand Parent")
+    print("I am Grand Parent")
 
 class Parent(GrandParent):
   def method2(self):
