@@ -13,6 +13,10 @@ Methods are functions associated with a class. They define the behavior of the c
 ## Instance:
 ## Self: 
 ## Inheritance:
+Inherting the properties one class to another class is nothing but inheritance.
+Types:
+1). Single Inheritance:
+
 ## Method Overloading: 
 ### Same method name but the difference is in the number of parameters or different datatypes of parameters or both is called "Method Overloading". 
 We can't directly use method overloading in python. To use it we have to install "multipledispatch" package.
