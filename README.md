@@ -23,3 +23,14 @@ We can't directly use method overloading in python. To use it we have to install
 To use multipledispatch, you need to install the package first. You can do this using a package manager like pip:  pip install multipledispatch<br>
 ## Features of method overloading: 
 Flexibility, Readability, Program Complexity decrease.
+
+## Method Overriding:
+Same method in super class and subclass with same parameters and 
+we access the method in the subclass without accessing the super class
+method this is nothing but method overriding.
+
+### Rules for method overriding: 
+1). Inheritance should be there.
+2). Same method and same parameters must be there in the super and sub class.
+3). Logic must be different in methods of super and subclass.
+
