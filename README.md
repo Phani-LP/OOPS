@@ -1,5 +1,4 @@
 # OOPS
-
 ## Class: 
 A class is blue print. It have methods, attributes, constructor function, etc.,
 ## Object:
