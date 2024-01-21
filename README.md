@@ -37,15 +37,17 @@ method this is nothing but method overriding.
 The polymorphism is a Greek word. "POLY" means "MANY" and "MORPHISM" means "FORM" => Many Forms.
 Definition: 
 The ability to do more than one task is polymorphism.<br>
-Examples: Operator Overloading, Method Overloading, Method Overriding, etc.,
+Examples: , Method Overriding, etc.,
 ### Types: Static Polymorphism & Dynamic Polymorphism
-Static Polymorphism or Compile Time Polymorphism: If the polymorphism occurs during compilation of the program then it is called Static Polymorphism.
-Dynamic Polymorphism or Run Time Polymorphism: If the polymorphism occurs during execution of the program then it is called Dynamic Polymorphism.:
-Operator Overloading Example: 
+<h4>Static Polymorphism or Compile Time Polymorphism:</h4> If the polymorphism occurs during compilation of the program then it is called Static Polymorphism.<br>
+Examples:<br>
+<h5> Operator Overloading:</h5> 
 The operator "+" can be used for "addition of two numbers", "concatination of strings".
 The operator "*" can be used for "multiplication", "repetition", "packing & unpacking of arguments".
-
-Method Overloading Example: 
+<h5> Method Overloading:</h5>
+The print(), max(), min(), sorted(), etc., all the functions are examples for polymorphism.<br>
+<h4>Dynamic Polymorphism or Run Time Polymorphism:</h4> If the polymorphism occurs during execution of the program then it is called Dynamic Polymorphism.:
+Example: Method Overriding
 
 
 
