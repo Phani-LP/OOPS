@@ -33,3 +33,30 @@ method this is nothing but method overriding.
 2). Same method and same parameters must be there in the super and sub class.<br>
 3). Logic must be different in methods of super and subclass.<br>
 
+## Polymorphism
+The polymorphism is a Greek word. "POLY" means "MANY" and "MORPHISM" means "FORM" => Many Forms.
+Definition: 
+The ability to do more than one task is polymorphism.<br>
+Examples: Operator Overloading, Method Overloading, Method Overriding, etc.,
+### Types: Static Polymorphism & Dynamic Polymorphism
+Static Polymorphism or Compile Time Polymorphism: If the polymorphism occurs during compilation of the program then it is called Static Polymorphism.
+Dynamic Polymorphism or Run Time Polymorphism: If the polymorphism occurs during execution of the program then it is called Dynamic Polymorphism.:
+Operator Overloading Example: 
+The operator "+" can be used for "addition of two numbers", "concatination of strings".
+The operator "*" can be used for "multiplication", "repetition", "packing & unpacking of arguments".
+
+Method Overloading Example: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
