@@ -40,9 +40,10 @@ The ability to do more than one task is polymorphism.<br>
 Examples: , Method Overriding, etc.,
 ### Types: Static Polymorphism & Dynamic Polymorphism
 <h4>Static Polymorphism or Compile Time Polymorphism:</h4> If the polymorphism occurs during compilation of the program then it is called Static Polymorphism.<br>
-Examples:<br>
-<h5> Operator Overloading:</h5> 
-The operator "+" can be used for "addition of two numbers", "concatination of strings".
+
+
+<h5>Examples:<br> Operator Overloading:</h5> 
+The operator "+" can be used for "addition of two numbers", "concatination of strings".<br>
 The operator "*" can be used for "multiplication", "repetition", "packing & unpacking of arguments".
 <h5> Method Overloading:</h5>
 The print(), max(), min(), sorted(), etc., all the functions are examples for polymorphism.<br>
