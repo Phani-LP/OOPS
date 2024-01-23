@@ -10,6 +10,7 @@ Also known as properties or fields, attributes are the data members of a class t
 ## Methods: 
 Methods are functions associated with a class. They define the behavior of the class and can operate on the data attributes of the object.
 ## Instance:
+An instance, also known as an object, is a concrete occurrence of a class. It represents a specific entity with its own set of attributes and can perform actions as defined by the methods in the class.
 ## Self: 
 ## Inheritance:
 Inherting the properties one class to another class is nothing but inheritance.
