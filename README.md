@@ -55,7 +55,7 @@ Example: Method Overriding
 desc
 
 ## Name Mangling: 
-Name Mangling can be used to access private data in { own class objects, subclasses & subclass objects }.
+Name Mangling can be used to access private data or methods in { own class objects, subclasses & subclass objects }.
 Rule: Min 2 underscores before and maximum one underscore after the name of data or method. Ex: __data_, __data, ___data, ect.,
 
 
