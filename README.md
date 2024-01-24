@@ -51,6 +51,13 @@ The print(), max(), min(), sorted(), etc., all the functions are examples for po
 <h4>Dynamic Polymorphism or Run Time Polymorphism:</h4> If the polymorphism occurs during execution of the program then it is called Dynamic Polymorphism.:
 Example: Method Overriding
 
+### Encapsulation:
+desc
+
+## Name Mangling: 
+Name Mangling can be used to access private data in { own class objects, subclasses & subclass objects }.
+Rule: Min 2 underscores before and maximum one underscore after the name of data or method. Ex: __data_, __data, ___data, ect.,
+
 
 
 
