@@ -25,4 +25,3 @@ class BankAccount:
 obj1 = BankAccount(12345678910,'Naga Phanindra',10000)
 obj1.deposit(10000)
 obj1.withdraw(1000)
-

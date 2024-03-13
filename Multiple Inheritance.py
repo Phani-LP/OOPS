@@ -9,8 +9,7 @@ class Parent2:
 
 class Child(Parent1, Parent2):
     def method3(self):
-        print("I'm a Child.")
-
+        print("I'm a Child.") 
 
 # Creating a object to Child class and Accessing it's parent's methods.   
 obj = Child()
