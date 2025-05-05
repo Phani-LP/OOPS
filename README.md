@@ -1,73 +1,263 @@
-# OOPS
-## Class: 
-A class is blue print. It have methods, attributes, constructor function, etc.,
-## Object:
-Object: An object is an instance of a class. It is a concrete realization of the class, with its own unique data attributes and, potentially, modified behavior through its methods.
+# Object-Oriented Programming (OOP) in Python
 
-## Attributes: 
-Also known as properties or fields, attributes are the data members of a class that define the characteristics of an object.
+This repository provides a comprehensive guide to Object-Oriented Programming (OOP) concepts in Python, complete with examples and explanations. It is designed to assist beginners and intermediate developers in understanding and implementing OOP principles effectively.
 
-## Methods: 
-Methods are functions associated with a class. They define the behavior of the class and can operate on the data attributes of the object.
-## Instance:
-An instance, also known as an object, is a concrete occurrence of a class. It represents a specific entity with its own set of attributes and can perform actions as defined by the methods in the class.
-## Self: 
-## Inheritance:
-Inherting the properties one class to another class is nothing but inheritance.
-Types:
-1). Single Inheritance:
+---
 
-## Method Overloading: 
-### Same method name but the difference is in the number of parameters or different datatypes of parameters or both is called "Method Overloading". 
-We can't directly use method overloading in python. To use it we have to install "multipledispatch" package.
-To use multipledispatch, you need to install the package first. You can do this using a package manager like pip:  pip install multipledispatch<br>
-## Features of method overloading: 
-Flexibility, Readability, Program Complexity decrease.
+## Table of Contents
+- [Class](#class)
+- [Object](#object)
+- [Attributes](#attributes)
+- [Methods](#methods)
+- [Instance](#instance)
+- [Self](#self)
+- [Inheritance](#inheritance)
+- [Method Overloading](#method-overloading)
+- [Method Overriding](#method-overriding)
+- [Polymorphism](#polymorphism)
+- [Encapsulation](#encapsulation)
+- [Name Mangling](#name-mangling)
+- [Repository Structure](#repository-structure)
+- [How to Run](#how-to-run)
+- [Prerequisites](#prerequisites)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
 
-## Method Overriding:
-Same method in super class and subclass with same parameters and 
-we access the method in the subclass without accessing the super class
-method this is nothing but method overriding.
+---
 
-### Rules for method overriding: 
-1). Inheritance should be there.<br>
-2). Same method and same parameters must be there in the super and sub class.<br>
-3). Logic must be different in methods of super and subclass.<br>
+## Class
+A **class** is a blueprint for creating objects. It defines attributes and methods that objects instantiated from the class will possess.
+
+### Example:
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        return f"Hello, my name is {self.name} and I am {self.age} years old."
+```
+
+## Object
+An **object** is an instance of a class, representing a concrete entity with its own data attributes and methods.
+
+### Example:
+```python
+person1 = Person("Alice", 30)
+print(person1.greet())  # Output: Hello, my name is Alice and I am 30 years old.
+```
+
+## Attributes
+**Attributes** (or properties) are data members of a class that define an object's characteristics.
+
+### Example:
+```python
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+car1 = Car("Toyota", "Corolla")
+print(car1.brand)  # Output: Toyota
+```
+
+## Methods
+**Methods** are functions defined within a class that describe the behaviors of an object and can manipulate its attributes.
+
+### Example:
+```python
+class Calculator:
+    def add(self, a, b):
+        return a + b
+
+calc = Calculator()
+print(calc.add(5, 3))  # Output: 8
+```
+
+## Instance
+An **instance** is a specific object created from a class, embodying the class's attributes and methods.
+
+### Example:
+```python
+# Refer to the Object example above
+```
+
+## Self
+The **self** keyword represents the instance of a class, allowing access to its attributes and methods.
+
+### Example:
+```python
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        return f"{self.name} says Woof!"
+
+dog1 = Dog("Buddy")
+print(dog1.bark())  # Output: Buddy says Woof!
+```
+
+## Inheritance
+**Inheritance** allows a child class to inherit properties and behaviors from a parent class.
+
+### Types of Inheritance:
+- **Single Inheritance**: A child class inherits from one parent class.
+- **Multiple Inheritance**: A child class inherits from multiple parent classes.
+- **Multi-Level Inheritance**: A class inherits from a child class of another class.
+- **Hierarchical Inheritance**: Multiple child classes inherit from one parent class.
+- **Hybrid Inheritance**: A combination of multiple inheritance types.
+
+### Example:
+```python
+class Animal:
+    def speak(self):
+        return "I am an animal."
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+dog = Dog()
+print(dog.speak())  # Output: Woof!
+```
+
+## Method Overloading
+**Method overloading** allows multiple methods with the same name but different parameters. Python does not support this natively but can achieve it using the `multipledispatch` package.
+
+### Example:
+```python
+from multipledispatch import dispatch
+
+class Math:
+    @dispatch(int, int)
+    def add(self, a, b):
+        return a + b
+
+    @dispatch(str, str)
+    def add(self, a, b):
+        return a + b
+
+math = Math()
+print(math.add(5, 3))  # Output: 8
+print(math.add("Hello, ", "World!"))  # Output: Hello, World!
+```
+
+## Method Overriding
+**Method overriding** occurs when a subclass redefines a method from its parent class to provide a specific implementation.
+
+### Example:
+```python
+class Parent:
+    def show(self):
+        return "This is the parent class."
+
+class Child(Parent):
+    def show(self):
+        return "This is the child class."
+
+child = Child()
+print(child.show())  # Output: This is the child class.
+```
 
 ## Polymorphism
-The polymorphism is a Greek word. "POLY" means "MANY" and "MORPHISM" means "FORM" => Many Forms.
-Definition: 
-The ability to do more than one task is polymorphism.<br>
-Examples: , Method Overriding, etc.,
-### Types: Static Polymorphism & Dynamic Polymorphism
-<h4>Static Polymorphism or Compile Time Polymorphism:</h4> If the polymorphism occurs during compilation of the program then it is called Static Polymorphism.<br>
+**Polymorphism** enables methods in different classes to share the same name but exhibit different behaviors.
 
+### Example:
+```python
+class Bird:
+    def fly(self):
+        return "Birds can fly."
 
-<h5>Examples:<br> Operator Overloading:</h5> 
-The operator "+" can be used for "addition of two numbers", "concatination of strings".<br>
-The operator "*" can be used for "multiplication", "repetition", "packing & unpacking of arguments".
-<h5> Method Overloading:</h5>
-The print(), max(), min(), sorted(), etc., all the functions are examples for polymorphism.<br>
-<h4>Dynamic Polymorphism or Run Time Polymorphism:</h4> If the polymorphism occurs during execution of the program then it is called Dynamic Polymorphism.:
-Example: Method Overriding
+class Penguin(Bird):
+    def fly(self):
+        return "Penguins cannot fly."
 
-### Encapsulation:
-desc
+bird = Bird()
+penguin = Penguin()
+print(bird.fly())  # Output: Birds can fly.
+print(penguin.fly())  # Output: Penguins cannot fly.
+```
 
-## Name Mangling: 
-Name Mangling can be used to access private data or methods in { own class objects, subclasses & subclass objects }.
-Rule: Min 2 underscores before and maximum one underscore after the name of data or method. Ex: __data_, __data, ___data, ect.,
+## Encapsulation
+**Encapsulation** involves bundling data and methods into a single unit, restricting direct access to some components.
 
+### Example:
+```python
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # Private attribute
 
+    def deposit(self, amount):
+        self.__balance += amount
 
+    def get_balance(self):
+        return self.__balance
 
+account = BankAccount(1000)
+account.deposit(500)
+print(account.get_balance())  # Output: 1500
+```
 
+## Name Mangling
+**Name mangling** ensures private attributes are inaccessible outside the class by prefixing them with double underscores.
 
+### Example:
+```python
+class Example:
+    def __init__(self):
+        self.__private = "This is private"
 
+    def get_private(self):
+        return self.__private
 
+obj = Example()
+print(obj.get_private())  # Output: This is private
+```
 
+## Repository Structure
+```
+OOPS-main/
+├── Class_Object_Self.py
+├── Single_Inheritance.py
+├── Multiple_Inheritance.py
+├── Multi_Level_Inheritance.py
+├── Hierarchical_Inheritance.py
+├── Hybrid_Inheritance.py
+├── Method_Overloading.py
+├── Method_Overriding.py
+├── Name_Mangling.py
+├── README.md
+```
 
+## How to Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/OOPS-main.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd OOPS-main
+   ```
+3. Run the Python files:
+   ```bash
+   python <filename>.py
+   ```
 
+## Prerequisites
+- Python 3.x installed.
+- Install the `multipledispatch` package for method overloading:
+  ```bash
+  pip install multipledispatch
+  ```
 
+## Contributing
+Contributions are welcome! Fork the repository, make your improvements, and submit a pull request.
 
+## License
+This project is a course of work and not bound by a specific license.
 
+## Author
+Created by Naga Phanindra.
